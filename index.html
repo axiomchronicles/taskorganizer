@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Study Planner and Task Organizer</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>📚 Study Planner and Task Organizer</h1>
+        <p id="quote">"Stay focused and never give up!"</p>
+    </header>
+    <main>
+        <section class="task-section">
+            <h2>Your Tasks <span id="task-count">(0 tasks)</span></h2>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Enter a new task" required>
+                <input type="date" id="deadline-input" required>
+                <select id="priority-input">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <div class="filter-section">
+                <button onclick="filterTasks('all')">All</button>
+                <button onclick="filterTasks('high')">High Priority</button>
+                <button onclick="filterTasks('medium')">Medium Priority</button>
+                <button onclick="filterTasks('low')">Low Priority</button>
+            </div>
+
+            <ul id="task-list"></ul>
+        </section>
+
+        <section class="progress-section">
+            <h2>Progress</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p id="progress-text">0% Complete</p>
+        </section>
+
+        <section class="tips-section">
+            <h2>Productivity Tips</h2>
+            <ul id="tips-list">
+                <li>Break down big tasks into smaller ones.</li>
+                <li>Take regular breaks to recharge.</li>
+                <li>Set achievable goals each day.</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
